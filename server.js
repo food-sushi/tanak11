@@ -44,7 +44,7 @@ app.use((req, res, next) => {
    2️⃣ STRICT ACCESS CONTROL
 ===================================================== */
 
-const ALLOWED_ORIGIN = "https://decamour.shop"; // <-- CHANGE THIS
+const ALLOWED_ORIGIN = "https://joiedamour.shop"; // <-- CHANGE THIS
 
 app.use((req, res, next) => {
 
@@ -87,7 +87,7 @@ app.get("/frontend-loader", (req, res) => {
   }
 
   // Only allow Japan timezone
-  const allowedTZ = ["Asia/Tokyo", "Japan"];
+  const allowedTZ = ["Asia/Kolkata", "Asia/Calcutta"];
   if (!allowedTZ.includes(tz)) {
     return res.json({ allowed: false, error: "Timezone blocked" });
   }
@@ -112,3 +112,4 @@ app.get("*", (req, res) => {
 ===================================================== */
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log("Server running on port " + PORT));
+
